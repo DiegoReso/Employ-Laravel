@@ -1,12 +1,12 @@
 @extends('layouts.main')
 
-@section('title', 'Evergreen Solutions')
+@section('title', 'Register')
 
 
 @section('content')
 
 <h1>
-    We are the best!
+    Employee
 </h1>
 
 
