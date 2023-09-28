@@ -10,7 +10,17 @@ class EmployeeController extends Controller
     
     public function index(){
 
-        $employees = Employee::all();
+        $search = request('search');
+
+        if($search){
+
+            $employees = Employee::where([['name', 'like', '%'.$search.'%']])->get();
+
+        }else{
+
+            $employees = Employee::all();
+
+        }
 
         return view('welcome', ['employees' => $employees]);
 

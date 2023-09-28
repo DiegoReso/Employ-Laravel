@@ -2,7 +2,6 @@
 
 @section('title', 'Evergreen Solutions')
 
-
 @section('content')
 
 <div id="search-container" class="col-md-12">
