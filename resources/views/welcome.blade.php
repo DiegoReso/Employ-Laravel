@@ -6,7 +6,15 @@
 @section('content')
 
 <h1>
-    We are the best!
+    @if(session('msg'))
+    <p>Registration completed successfully</p>
+    @endif
+    
+    
+        <div>
+            We are the best!
+        </div>
+   
 </h1>
 
 

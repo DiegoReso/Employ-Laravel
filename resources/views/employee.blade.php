@@ -1,13 +1,12 @@
 @extends('layouts.main')
 
-@section('title', 'Register')
+@section('title', 'Employees')
 
 
 @section('content')
 
-<h1>
-    Employee
-</h1>
-
+<div id="event-create-container" class="col-md-6 offset-md-3">
+    <h1>Employees</h1>
+</div>
 
 @endsection

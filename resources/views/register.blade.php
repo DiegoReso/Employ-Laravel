@@ -5,11 +5,10 @@
 
 @section('content')
 <div id="event-create-container" class="col-md-6 offset-md-3">
-  <h1>Employee Register</h1>
-  <form action="/create" method="POST" enctype="multipart/form-data">
+  <h1>Employee Registration</h1>
+  <form action="/create" method="POST">
     @csrf
    
-    
     <div class="form-group">
       <label for="name">Name:</label>
       <input type="text" class="form-control" id="name" name="name" placeholder="employee name">
@@ -24,7 +23,7 @@
     </div>
     <div class="form-group">
       <label for="title">Dependents?</label>
-      <select name="private" id="private" class="form-control">
+      <select name="dependents" id="private" class="form-control">
         <option value="0">No</option>
         <option value="1">Yes</option>
       </select>
@@ -36,13 +35,13 @@
     <div class="form-group">
       <label for="title">Skills:</label>
       <div class="form-group">	
-        <input type="checkbox" name="items[]" value="Housekeeping"> Housekeeping
+        <input type="checkbox" name="skills[]" value="Housekeeping"> Housekeeping
       </div>
       <div class="form-group">	
-        <input type="checkbox" name="items[]" value="CNA"> CNA
+        <input type="checkbox" name="skills[]" value="CNA"> CNA
       </div>
       <div class="form-group">	
-        <input type="checkbox" name="items[]" value="Driver"> Driver
+        <input type="checkbox" name="skills[]" value="Driver"> Driver
       </div>
      
     <input type="submit" class="btn btn-outline-success" value="Criar Evento">
