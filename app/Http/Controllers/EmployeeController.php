@@ -80,4 +80,27 @@ class EmployeeController extends Controller
         return redirect('/')->with('msg', 'Registration completed successfully');
     }
 
+    public function edit($id){
+
+        $employee = Employee::findOrFail($id);
+
+
+        return view('edit', ['employee' => $employee]);
+    }
+
+    public function update(Request $request){
+        $data = $request->all();
+        Employee::FindOrFail($request->id)->update($data);
+
+        return redirect('/');
+
+    }
+
+    public function delete($id){
+
+        Employee::findOrFail($id)->delete();
+
+        return redirect('/');
+    }
+
 }

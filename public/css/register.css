@@ -2,7 +2,7 @@
     margin-top: 80px;
 }
 
-form{
+.container form{
     margin-top: 80px;
 }
 
@@ -28,4 +28,17 @@ form{
 input[type="checkbox"] {
     width: 18px;
     height: 18px;
+}
+
+#event-edit-container{
+    position: relative;
+}
+#event-edit-container h1{
+    text-align: center;
+}
+
+.form-delete{
+    position: absolute;
+    display: inline;
+    right: 5px;
 }

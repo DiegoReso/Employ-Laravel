@@ -1,11 +1,11 @@
 @extends('layouts.main')
 
-@section('title', 'Employees')
+@section('title', 'EmployeesSSN')
 
 
 @section('content')
 
-<div id="event-create-container" class="col-md-6 offset-md-3">
+<div id="event-edit-container" class="col-md-6 offset-md-3">
     <h1>Employee</h1>
     <div>
         <span>Name:</span>  {{$employee->name}} {{$employee->middle_name}} {{$employee->last_name}} - <span>Date of Birthday:</span> {{ date('m/d/Y', strtotime($employee->date_birth))}} - <span>SSN:</span><em>{{$employee->ssn}}</em></p>
