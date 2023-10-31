@@ -17,7 +17,9 @@ Route::get('/',[EmployeeController::class, 'index']);
 
 Route::get('/register', [EmployeeController::class, 'register']);
 
-Route::get('/employee', [EmployeeController::class, 'employee']);
+Route::get('/employee/{id}', [EmployeeController::class, 'employee']);
+
+Route::get('/employeessn/{id}', [EmployeeController::class, 'employeessn']);
 
 Route::post('/create',[EmployeeController::class, 'create']);
 

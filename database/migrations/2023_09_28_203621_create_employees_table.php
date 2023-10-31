@@ -14,11 +14,21 @@ return new class extends Migration
         Schema::create('employees', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->date('date');
+            $table->string('last_name');
+            $table->string('middle_name');
+            $table->date('date_birth');
+            $table->string('phone');
+            $table->string('ssn');
+            $table->string('street');
             $table->string('city');
-            $table->boolean('dependents');
-            $table->text('description');
-            $table->json('skills');
+            $table->string('state');
+            $table->string('zip');
+            $table->date('date_hire');
+            $table->string('facility');
+            $table->string('position');
+            $table->date('date_termination')->nullable();
+            $table->text('description')->nullable();
+            $table->json('items');
             $table->timestamps();
         });
     }

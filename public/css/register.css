@@ -6,7 +6,26 @@ form{
     margin-top: 80px;
 }
 
-#event-create-container  h1 {
-    text-align: center;
+#event-create-container div{
+    margin-top: 8px;
 }
 
+#event-create-container  h1 {
+    text-align: center;
+
+    
+}
+
+#box{
+    display: flex;
+    justify-content: center;
+    gap: 20px
+}
+.btn{
+    margin-top: 20px;
+}
+
+input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+}

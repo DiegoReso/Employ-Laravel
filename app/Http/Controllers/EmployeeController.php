@@ -14,7 +14,10 @@ class EmployeeController extends Controller
 
         if($search){
 
-            $employees = Employee::where([['name', 'like', '%'.$search.'%']])->get();
+            $employees = Employee::where([['name', 'like', '%'.$search.'%']])->
+            orWhere([['facility', 'like', '%'.$search.'%']])->
+            orWhereJsoncontains('items', $search)
+            ->get();
 
         }else{
 
@@ -22,7 +25,7 @@ class EmployeeController extends Controller
 
         }
 
-        return view('welcome', ['employees' => $employees]);
+        return view('welcome', ['employees' => $employees, 'search' => $search]);
 
     }
 
@@ -32,20 +35,44 @@ class EmployeeController extends Controller
         return view('register');
     }
 
-    public function employee(){
+    public function employee($id){
 
-        return view('employee');
+
+        $employee = Employee::findOrFail($id);
+
+
+        return view('employee', ['employee' => $employee]);
     }
+
+    public function employeessn($id){
+
+
+        $employee = Employee::findOrFail($id);
+
+
+        return view('employeessn', ['employee' => $employee]);
+    }
+
 
     public function create(Request $request){
 
         $employees = new Employee();
         $employees->name = $request->name;
-        $employees->date = $request->date;
+        $employees->last_name = $request->last_name;
+        $employees->middle_name = $request->middle_name;
+        $employees->date_birth = $request->date_birth;
+        $employees->phone = $request->phone;
+        $employees->ssn = $request->ssn;
+        $employees->date_hire = $request->date_hire;
+        $employees->facility = $request->facility;
+        $employees->position = $request->position;
+        $employees->date_termination = $request->date_termination;
+        $employees->items = $request->items;
+        $employees->street = $request->street;
         $employees->city = $request->city;
-        $employees->dependents = $request->dependents;
+        $employees->state = $request->state;
+        $employees->zip = $request->zip;
         $employees->description = $request->description;
-        $employees->skills = $request->skills;
 
 
         $employees->save();

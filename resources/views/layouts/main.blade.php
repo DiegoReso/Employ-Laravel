@@ -34,7 +34,7 @@
                                 <a href="/register" class="sidebar-link">Register</a>
                             </li>
                             <li class="sidebar-item">
-                                <a href="/employee" class="sidebar-link">Employee</a>
+                                <a href="/employee" class="sidebar-link">Employee Report</a>
                             </li>
                             <li class="sidebar-item">
                                 <a href="#" class="sidebar-link">Data</a>
@@ -89,6 +89,9 @@
         integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
         crossorigin="anonymous"></script>
     <script src="js/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.6/jquery.inputmask.min.js"></script>
+
 </body>
 
 </html>

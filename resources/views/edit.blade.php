@@ -10,7 +10,7 @@
     @csrf
     <div class="form-group">
       <label for="name">Name</label>
-      <input type="text" class="form-control"  name="name">
+      <input type="text" class="form-control"  name="name" value="{{$employee->name}}">
     </div>
     <div class="form-group">
       <label for="last_name">Last Name</label>

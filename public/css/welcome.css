@@ -5,12 +5,52 @@
 
 #cards-container {
     display: flex;
+    margin-left: 20%;
+    
   }
   
   #events-container .card {
-    flex: 1 1 24%;
+    flex: 1 1 25%;
     max-width: 25%;
     border-radius: 10px;
     padding: 0;
     margin: .5%;
   }
+
+  h1{
+    font-size: 18px;
+  }
+
+#search-container{
+  width: 500px;
+  margin: auto;
+}
+
+.card-date{
+  font-size: 15px;
+
+}
+
+.card-title{
+  font-size: 25px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+justify-content: space-between;
+  
+}
+
+.position-span{
+  font-size: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 900px){
+  .card-title{
+    display: block;
+  }
+
+
+}
+
