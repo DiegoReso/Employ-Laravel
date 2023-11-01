@@ -34,7 +34,7 @@
                                 <a href="/register" class="sidebar-link">Register</a>
                             </li>
                             <li class="sidebar-item">
-                                <a href="/employee" class="sidebar-link">Employee Report</a>
+                                <a href="/report" class="sidebar-link">Employee Report</a>
                             </li>
                             <li class="sidebar-item">
                                 <a href="#" class="sidebar-link">Data</a>

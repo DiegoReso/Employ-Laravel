@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EmployeeController;
+use App\Http\Controllers\ReportController;
+use Symfony\Component\CssSelector\Parser\Shortcut\EmptyStringParser;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -28,3 +31,8 @@ Route::post('/create',[EmployeeController::class, 'create']);
 Route::put('/employee/update/{id}', [EmployeeController::class, 'update']);
 
 Route::delete('/delete/{id}', [EmployeeController::class, 'delete']);
+
+Route::get('/report', [ReportController::class, 'index']);
+
+
+Route::post('/generate-report', [ReportController::class, 'generate'])->name('generate.report');
