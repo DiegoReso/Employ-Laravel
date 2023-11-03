@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Employee;
-use PDF;
+use Barryvdh\DomPDF\Facade\Pdf;
 
 class ReportController extends Controller
 {
@@ -21,6 +21,6 @@ class ReportController extends Controller
 
         $pdf = PDF::loadView('pdf', compact('employees', 'facility',));
     
-        return $pdf->download('employee_report.pdf');
+        return $pdf->stream('employee_report.pdf');
     }
 }
